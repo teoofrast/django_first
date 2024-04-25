@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db2:
+    container_name: db2
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: teoofrast
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: db_name
+
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"

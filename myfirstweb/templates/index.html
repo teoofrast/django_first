@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Список товаров</h1>
+    {%for i in data%}
+    Наименование товара: {{i.name}}
+    Описание: {{i.description}}
+    В наличии:
+    {% if i.quantity_available <= 5 %}
+    <b style="color: red;">{{i.quantity_available}}</b>
+
+    {% else %}
+    <b style="color: green;">{{i.quantity_available}}</b>
+
+    {% endif %}
+    <br>
+    {%endfor%}
+</body>
+</html>
